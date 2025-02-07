@@ -1,7 +1,9 @@
-#include <iostream>
+#include "Medicine.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Medicine obj("Aspiryn", "pills", 45.99, "Ukraine");
+    obj.setTitle("Aspiryn Forte");
+    obj.showInfo();
 }
 
