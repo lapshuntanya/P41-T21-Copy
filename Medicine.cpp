@@ -68,26 +68,20 @@ void Medicine::setCountry(const char* country){
 	}
 }
 
-const char* Medicine::getTitle() const
-{
-	return nullptr;
-}
+const char* Medicine::getTitle() const{	return m_title;}
 
-const char* Medicine::getType() const
-{
-	return nullptr;
-}
+const char* Medicine::getType() const{	return m_type;}
 
-float Medicine::getPrice() const
-{
-	return 0.0f;
-}
+float Medicine::getPrice() const{	return m_price;}
 
-const char* Medicine::getCountry() const
-{
-	return nullptr;
-}
+const char* Medicine::getCountry() const{	return m_country;}
 
 void Medicine::showInfo() const
 {
+	cout << "=======================================\n";
+	cout << "Title:   " << m_title << endl;
+	cout << "Type:    " << m_type << endl;
+	cout << "Price:	  " << m_price << "UAH" << endl;
+	cout << "Country: " << m_country << endl;
+	cout << "=======================================\n\n";
 }
