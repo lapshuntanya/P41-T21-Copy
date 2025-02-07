@@ -41,6 +41,29 @@ Medicine::Medicine(const Medicine& copy)
 	this->m_price = copy.m_price;
 }
 
+Medicine& Medicine::operator=(const Medicine& copy)
+{
+	delete[] m_title;
+	delete[] m_type;
+	delete[] m_country;
+
+	int sizeTitle = strlen(copy.m_title) + 1;
+	this->m_title = new char[sizeTitle];
+	strcpy_s(this->m_title, sizeTitle, copy.m_title);
+
+	int sizeType = strlen(copy.m_type) + 1;
+	this->m_type = new char[sizeType];
+	strcpy_s(this->m_type, sizeType, copy.m_type);
+
+	int sizeCountry = strlen(copy.m_country) + 1;
+	this->m_country = new char[sizeCountry];
+	strcpy_s(this->m_country, sizeCountry, copy.m_country);
+
+	this->m_price = copy.m_price;
+
+	return *this;
+}
+
 Medicine::~Medicine(){
 	delete[] m_title;
 	delete[] m_type;
