@@ -18,5 +18,6 @@ public:
 	int getAmoutofMedicine()const;
 	void addMedicine(Medicine object);
 
+	void showInfo()const;
 };
 
