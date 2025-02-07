@@ -24,6 +24,23 @@ Medicine::Medicine(const char* title, const char* type, float price, const char*
 	m_price = price;
 }
 
+Medicine::Medicine(const Medicine& copy)
+{
+	int sizeTitle = strlen(copy.m_title) + 1;
+	this->m_title = new char[sizeTitle];
+	strcpy_s(this->m_title, sizeTitle, copy.m_title);
+
+	int sizeType = strlen(copy.m_type) + 1;
+	this->m_type = new char[sizeType];
+	strcpy_s(this->m_type, sizeType, copy.m_type);
+
+	int sizeCountry = strlen(copy.m_country) + 1;
+	this->m_country = new char[sizeCountry];
+	strcpy_s(this->m_country, sizeCountry, copy.m_country);
+
+	this->m_price = copy.m_price;
+}
+
 Medicine::~Medicine(){
 	delete[] m_title;
 	delete[] m_type;
@@ -81,7 +98,7 @@ void Medicine::showInfo() const
 	cout << "=======================================\n";
 	cout << "Title:   " << m_title << endl;
 	cout << "Type:    " << m_type << endl;
-	cout << "Price:	  " << m_price << "UAH" << endl;
+	cout << "Price:   " << m_price << "UAH" << endl;
 	cout << "Country: " << m_country << endl;
 	cout << "=======================================\n\n";
 }
