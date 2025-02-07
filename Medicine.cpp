@@ -33,18 +33,39 @@ Medicine::~Medicine(){
 
 void Medicine::setTitle(const char* title)
 {
+	int sizeTitle = strlen(title);
+	if (sizeTitle >= 1 && title[0] != ' ') {
+		delete[] m_title;
+
+		m_title = new char[sizeTitle + 1];
+		strcpy_s(m_title, sizeTitle + 1, title);
+	}
 }
 
-void Medicine::setType(const char* type)
-{
+void Medicine::setType(const char* type){
+	int sizeType = strlen(type);
+	if (sizeType >= 1 && type[0] != ' ') {
+		delete[] m_type;
+
+		m_type = new char[sizeType + 1];
+		strcpy_s(m_type, sizeType + 1, type);
+	}
 }
 
-void Medicine::setPrice(float price)
-{
+void Medicine::setPrice(float price){
+	if (price > 0) {
+		m_price = price;
+	}
 }
 
-void Medicine::setCountry(const char* country)
-{
+void Medicine::setCountry(const char* country){
+	int sizeCountry = strlen(country);
+	if (sizeCountry >= 1 && country[0] != ' ') {
+		delete[] m_country;
+
+		m_country = new char[sizeCountry + 1];
+		strcpy_s(m_country, sizeCountry + 1, country);
+	}
 }
 
 const char* Medicine::getTitle() const
