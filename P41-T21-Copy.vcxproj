@@ -131,6 +131,7 @@
     <ClCompile Include="P41-T21-Copy.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Array_Template.h" />
     <ClInclude Include="Medicine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

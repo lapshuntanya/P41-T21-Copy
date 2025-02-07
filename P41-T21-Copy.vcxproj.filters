@@ -26,5 +26,8 @@
     <ClInclude Include="Medicine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Array_Template.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

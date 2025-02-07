@@ -2,7 +2,7 @@
 
 int main()
 {
-    Medicine obj("Aspiryn", "pills", 45.99, "Ukraine");
+   /* Medicine obj("Aspiryn", "pills", 45.99, "Ukraine");
     obj.setTitle("Aspiryn Forte");
     obj.showInfo();
 
@@ -18,6 +18,8 @@ int main()
 
     obj = obj2; //Noshpa => оператор присвоювання 
     obj.showInfo();
-    obj2.showInfo();
+    obj2.showInfo();*/
+
+
 }
 
