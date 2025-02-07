@@ -21,12 +21,18 @@
     <ClCompile Include="Medicine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Pharmacy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Medicine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Array_Template.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pharmacy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
